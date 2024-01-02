@@ -1,10 +1,10 @@
-Design Notes for Recipe Finder Projeect
+# Design Notes for Recipe Finder Projeect
 
 
-INPUT
+## INPUT
 csv files for recipes
     - Should be able to be updated through UI or prompted
-DATA
+## DATA
 Object Class: Recipe
     Attributes:
         - Recipe Name
@@ -15,7 +15,7 @@ Object Class: Recipe
         - Length of Cook time
         - Link to Website
 
-IO
+## IO
 RecipeReader
 
 
