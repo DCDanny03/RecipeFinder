@@ -16,7 +16,7 @@ public class Recipe {
     private String origin;
 
     /** List of Ingredients */
-    private List ingredients;
+    private List ingredients; // Testing for push and pulling
 
     /** Number of Ingredients */
     private int numberOfIngredients;
