@@ -1,9 +1,13 @@
 package data;
 
+import list.List;
+import java.util.Objects;
+
 /** 
  * Recipe Class 
+ * A recipe is comparable and identifiable
  * The characteristics for Recipes 
- * getters and setters methods
+ * name, origin, ingredients, numOfIngredients, prep, cook, url
  * 
  * @author Daniel Cao 
  */
@@ -16,10 +20,16 @@ public class Recipe {
     private String origin;
 
     /** List of Ingredients */
-    private List ingredients; // Testing for push and pulling
+    private List<String> ingredients; // Testing for push and pulling
+
+    /** List of Matching Ingredients */
+    private List<String> matchingIngredients;
 
     /** Number of Ingredients */
     private int numberOfIngredients;
+
+    /** Number of Ingredients */
+    private int numOfMatchingIngredients;
 
     /** Prep Time */
     private int prep;
@@ -35,19 +45,23 @@ public class Recipe {
      * @param name of recipe
      * @param origin of recipe
      * @param ingredients list of ingredients
+     * @param matchingIngredients list of matching ingredients
      * @param numberOfIngredients number of ingredients
+     * @param numOfMatchingIngredients number of ingredients
      * @param prep prep time
      * @param cook cook time
      * @param url url to recipe steps
      */
-    public Recipe(String name, String origin, List ingredients, int numberOfIngredients,
-        int prep, int cook, String url) {
+    public Recipe(String name, String origin, List<String> ingredients, List<String> matchingIngredients, int numberOfIngredients,
+         int numOfMatchingIngredients, int prep, int cook, String url) {
         
-            /** Intialize variables */
+        /** Intialize variables */
         this.name = name;
         this.origin = origin;
         this.ingredients = ingredients;
+        this.matchingIngredients = matchingIngredients;
         this.numberOfIngredients = numberOfIngredients;
+        this.numOfMatchingIngredients = numOfMatchingIngredients;
         this.prep = prep;
         this.cook = cook;
         this.url = url;
@@ -73,11 +87,11 @@ public class Recipe {
         this.origin = origin;
     }
 
-    public List getIngredients() {
+    public List<String> getIngredients() {
         return ingredients;
     }
 
-    public void setIngredients(List ingredients) {
+    public void setIngredients(List<String> ingredients) {
         this.ingredients = ingredients;
     }
 
@@ -87,6 +101,22 @@ public class Recipe {
 
     public void setNumberOfIngredients(int numberOfIngredients) {
         this.numberOfIngredients = numberOfIngredients;
+    }
+
+    public List<String> getMatchingIngredients() {
+        return matchingIngredients;
+    }
+
+    public void setMatchingIngredients(List<String> matchingIngredients) {
+        this.matchingIngredients = matchingIngredients;
+    }
+
+    public int getNumOfMatchingIngredients() {
+        return numOfMatchingIngredients;
+    }
+
+    public void setNumOfMatchingIngredients(int numOfMatchingIngredients) {
+        this.numOfMatchingIngredients = numOfMatchingIngredients;
     }
 
     public int getPrep() {
@@ -112,6 +142,9 @@ public class Recipe {
     public void setUrl(String url) {
         this.url = url;
     }
+
+    
+
 
     
 
