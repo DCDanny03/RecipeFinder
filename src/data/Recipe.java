@@ -20,10 +20,10 @@ public class Recipe {
     private String origin;
 
     /** List of Ingredients */
-    private List<String> ingredients; // Testing for push and pulling
+    private String[] ingredients; // Testing for push and pulling
 
     /** List of Matching Ingredients */
-    private List<String> matchingIngredients;
+    private String[] matchingIngredients;
 
     /** Number of Ingredients */
     private int numberOfIngredients;
@@ -52,7 +52,7 @@ public class Recipe {
      * @param cook cook time
      * @param url url to recipe steps
      */
-    public Recipe(String name, String origin, List<String> ingredients, List<String> matchingIngredients, int numberOfIngredients,
+    public Recipe(String name, String origin, String[] ingredients, String[] matchingIngredients, int numberOfIngredients,
          int numOfMatchingIngredients, int prep, int cook, String url) {
         
         /** Intialize variables */
@@ -87,11 +87,11 @@ public class Recipe {
         this.origin = origin;
     }
 
-    public List<String> getIngredients() {
+    public String[] getIngredients() {
         return ingredients;
     }
 
-    public void setIngredients(List<String> ingredients) {
+    public void setIngredients(String[] ingredients) {
         this.ingredients = ingredients;
     }
 
@@ -103,11 +103,11 @@ public class Recipe {
         this.numberOfIngredients = numberOfIngredients;
     }
 
-    public List<String> getMatchingIngredients() {
+    public String[] getMatchingIngredients() {
         return matchingIngredients;
     }
 
-    public void setMatchingIngredients(List<String> matchingIngredients) {
+    public void setMatchingIngredients(String[] matchingIngredients) {
         this.matchingIngredients = matchingIngredients;
     }
 
